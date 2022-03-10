@@ -1,6 +1,6 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
-class MetaCode < Formula
+class Metacode < Formula
   desc "A code generator for Spring-based REST services"
   homepage "https://github.com/staycaffeinated/metacode/"
   url "https://raw.githubusercontent.com/staycaffeinated/homebrew-tap/main/metacode-application-0.1.0.tar.gz"

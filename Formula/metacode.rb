@@ -8,13 +8,14 @@ class Metacode < Formula
   license "Apache 2.0"
 
   def install
-    # put the extracted jar into the "private" libexec folder
+    # put the extracted tgz into the "private" libexec folder
     # homebrew automatically unarchives the tar.gz file for us,
-    # leaving us with the uber jar that gets copied to the install directory
-    libexec.install "metacode-application-0.1.0.tar"
-    # create a shell script to launch the jar file in the "public" bin folder
-    # The shell script will have the entry 'java -jar metacode-application-x.y.z-all.jar'
-    bin.write_jar_script libexec/"metacode-0.1.0-all.jar", "metacode"
+    libexec.install Dir["*"] 
+    # The distribution jar created by Shadown contains a lib and bin folder.
+    # The lib folder contains all the jars needed to run the app
+    # The bin folder contains a 'metacode' shell script and metacode.bat file
+    # Here, a symbolic link to said bin/metcode shell script created
+    bin.install_symlink "#{libexec}/bin/metacode"
   end
 
   test do

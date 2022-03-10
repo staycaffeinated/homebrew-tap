@@ -11,9 +11,9 @@ class Metacode < Formula
     # put the extracted jar into the "private" libexec folder
     # homebrew automatically unarchives the tar.gz file for us,
     # leaving us with the uber jar that gets copied to the install directory
-    libexec.install "metacode-0.1.0-all.jar"
+    libexec.install "metacode-application-0.1.0.tar"
     # create a shell script to launch the jar file in the "public" bin folder
-    # The shell script will have the entry 'java -jar mojo-application-x.y.z-all.jar'
+    # The shell script will have the entry 'java -jar metacode-application-x.y.z-all.jar'
     bin.write_jar_script libexec/"metacode-0.1.0-all.jar", "metacode"
   end
 

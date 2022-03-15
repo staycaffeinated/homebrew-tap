@@ -3,8 +3,8 @@
 class Metacode < Formula
   desc "A code generator for Spring-based REST services"
   homepage "https://github.com/staycaffeinated/metacode/"
-  url "https://raw.githubusercontent.com/staycaffeinated/homebrew-tap/main/metacode-application-0.1.0.tar.gz"
-  sha256 "14e54874af957cb71329349a7ac83fa80ac3c9011b5f852fe376282797910ac7"
+  url "https://raw.githubusercontent.com/staycaffeinated/homebrew-tap/main/metacode-0.1.1.tar.gz"
+  sha256 "2dacc95147ef6df426cb97d5f1aa570fe7c70b128f6a0df3f5ae97e1de5f098e"
   license "Apache 2.0"
 
   def install
@@ -21,8 +21,9 @@ class Metacode < Formula
   test do
     # `test do` will create, run in, and delete a temporary directory.
     #
-    # Run the test with `brew test mojo`. 
+    # You can manually run the test with the command: `brew test metacode`. 
     #
-    system "#{bin}/metacode --version"
+    output = shell_output("#{bin}/metacode --version")
+    assert_match "0.1.1", output
   end
 end

@@ -3,8 +3,8 @@
 class Metacode < Formula
   desc "A code generator for Spring-based REST services"
   homepage "https://github.com/staycaffeinated/metacode/"
-  url "https://raw.githubusercontent.com/staycaffeinated/homebrew-tap/main/metacode-0.1.1.tar.gz"
-  sha256 "2dacc95147ef6df426cb97d5f1aa570fe7c70b128f6a0df3f5ae97e1de5f098e"
+  url "https://raw.githubusercontent.com/staycaffeinated/homebrew-tap/main/metacode-0.1.2.tar.gz"
+  sha256 "21f5a9ec5ccc92e6cc9ea016f013462f9ee8d306b7b01eb46f0518d6ca4fae81"
   license "Apache 2.0"
 
   def install
@@ -24,6 +24,6 @@ class Metacode < Formula
     # You can manually run the test with the command: `brew test metacode`. 
     #
     output = shell_output("#{bin}/metacode --version")
-    assert_match "0.1.1", output
+    assert_match "0.1.2", output
   end
 end

@@ -1,10 +1,10 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 class Metacode < Formula
-  desc "A code generator for Spring-based REST services"
+  desc "A code generator for Spring-based applications"
   homepage "https://github.com/staycaffeinated/metacode/"
-  url "https://raw.githubusercontent.com/staycaffeinated/homebrew-tap/main/metacode-1.2.1.tar.gz"
-  sha256 "261afaeb125c26a796501a597a2b3955b09a28110e932c87d3234db2a41c77e4"
+  url "https://raw.githubusercontent.com/staycaffeinated/homebrew-tap/main/metacode-2.0.0.tar.gz"
+  sha256 "933f5be8b22f7ed75c507e1a6dff7444f59c2b325880ea5002e1d761a07e77be"
   license "Apache 2.0"
   
   # metacode works with jdk11 or higher, but does not require java11
@@ -27,6 +27,6 @@ class Metacode < Formula
     # You can manually run the test with the command: `brew test metacode`. 
     #
     output = shell_output("#{bin}/metacode --version")
-    assert_match "1.2.1", output
+    assert_match "2.0.0", output
   end
 end

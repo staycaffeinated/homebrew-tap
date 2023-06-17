@@ -4,7 +4,7 @@ class Metacode < Formula
   desc "A code generator for Spring-based applications"
   homepage "https://github.com/staycaffeinated/metacode/"
   url "https://raw.githubusercontent.com/staycaffeinated/homebrew-tap/main/metacode-9.0.1.tar.gz"
-  sha256 "837cee646260d2205916498bd21de00d96a8171a2f2b67671f3195012563385a"
+  sha256 "210fbb45dbdc4e944c5cbba6a5b7842d2c09a2f6fd6c7f447e14dd521f3b94c0"
   license "Apache 2.0"
   
   # metacode requires jdk17

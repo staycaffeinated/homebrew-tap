@@ -3,12 +3,12 @@
 class Metacode < Formula
   desc "A code generator for Spring-based applications"
   homepage "https://github.com/staycaffeinated/metacode/"
-  url "https://raw.githubusercontent.com/staycaffeinated/homebrew-tap/main/metacode-12.3.2.tar.gz"
-  sha256 "e1eda13b26276743a98c9f0c8dd833671bb9c4fd15bcc0605ef90aff7daf6c8e"
+  url "https://raw.githubusercontent.com/staycaffeinated/homebrew-tap/main/metacode-12.4.0.tar.gz"
+  sha256 "1c16a26f74bb37109c1f5bed7107a8ea3d9e29563689e457ce3cf8360bdbc450"
   license "Apache 2.0"
   
-  # metacode requires jdk17, but don't force installing jdk17
-  # depends_on "openjdk@17"
+  # metacode requires jdk21, but don't force installing jdk17
+  # depends_on "openjdk@21"
 
   def install
     # put the extracted tgz into the "private" libexec folder
@@ -27,6 +27,6 @@ class Metacode < Formula
     # You can manually run the test with the command: `brew test metacode`. 
     #
     output = shell_output("#{bin}/metacode --version")
-    assert_match "12.3.2", output
+    assert_match "12.4.0", output
   end
 end
